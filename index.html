@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кафедра БПБВ — Біотехнологія продуктів бродіння і виноробства | НУХТ</title>
+  <meta name="description" content="Кафедра біотехнології продуктів бродіння і виноробства Національного університету харчових технологій. Освітні програми, наукова діяльність, виноробство та пивоваріння." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <img src="images/logo/logo-small.png" alt="БПБВ НУХТ" class="nav__logo-img" />
+        <span class="nav__logo-text">БПБВ<span class="nav__logo-divider">|</span><span class="nav__logo-sub">НУХТ</span></span>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">Про кафедру</a></li>
+        <li><a href="#history">Історія</a></li>
+        <li><a href="#programs">Програми</a></li>
+        <li><a href="#faculty">Викладачі</a></li>
+        <li><a href="#alumni">Випускники</a></li>
+        <li><a href="#international">Міжнародна</a></li>
+        <li><a href="#clubs">Гуртки</a></li>
+        <li><a href="#life">Життя</a></li>
+        <li><a href="#contact" class="nav__cta">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grain"></div>
+      <div class="hero__gradient"></div>
+      <div class="hero__particles" id="particles"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__badge reveal">Національний університет харчових технологій</p>
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line">Кафедра</span>
+        <span class="hero__title-line hero__title-accent">Біотехнології</span>
+        <span class="hero__title-line">Продуктів Бродіння</span>
+        <span class="hero__title-line hero__title-accent">і Виноробства</span>
+      </h1>
+      <p class="hero__subtitle reveal">Від зерна до келиха — мистецтво бродіння,<br/>підкріплене наукою</p>
+      <div class="hero__actions reveal">
+        <a href="#programs" class="btn btn--primary">Освітні програми</a>
+        <a href="#about" class="btn btn--outline">Дізнатись більше</a>
+      </div>
+      <div class="hero__stats reveal">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="140">0</span><span class="hero__stat-plus">+</span>
+          <span class="hero__stat-label">Років традицій НУХТ</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="12000">0</span><span class="hero__stat-plus">+</span>
+          <span class="hero__stat-label">Студентів університету</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="3">0</span>
+          <span class="hero__stat-label">Рівні освіти</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Прокрутити вниз">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Про кафедру</span>
+        <h2 class="section__title">Де наука зустрічає <em>мистецтво бродіння</em></h2>
+      </div>
+      <!-- Photo mosaic from home page -->
+      <div class="about__photos reveal">
+        <div class="photo-mosaic">
+          <div class="photo-mosaic__item ">
+            <img src="images/home/home-07.png" alt="Кафедра БПБВ" loading="lazy" />
+          </div>
+          <div class="photo-mosaic__item">
+            <img src="images/home/home-08.png" alt="Кафедра БПБВ — заняття" loading="lazy" />
+          </div>
+        
+          <div class="photo-mosaic__item photo-mosaic__item--tall" >
+            <img src="images/home/home-09.jpg" alt="Кафедра БПБВ — подія" loading="lazy" />
+          </div>
+          <div class="photo-mosaic__item " >
+            <img src="images/home/home-02.jpg" alt="Кафедра БПБВ — подія" loading="lazy" />
+          </div>
+          <div class="photo-mosaic__item photo-mosaic__item--wide">
+            <img src="images/home/home-13.png" alt="Кафедра БПБВ — робота" loading="lazy" />
+          </div>
+          <div class="photo-mosaic__item ">
+            <img src="images/home/home-04.jpg" alt="Кафедра БПБВ — подія" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p class="about__lead">Кафедра біотехнології продуктів бродіння і виноробства здійснює підготовку фахівців у галузі знань 18 «Виробництво та технології» за спеціальністю 181 «Харчові технології».</p>
+          <p>Підготовка ведеться за освітнім ступенем «бакалавр» (ОП «Харчові технології та інженерія»), освітнім ступенем «магістр» (ОП «Технології продуктів бродіння і виноробства») та освітньо-науковим ступенем «доктор філософії» (ОНП «Харчові технології») денної і заочної формами навчання.</p>
+          <p>Кафедра одна з перших в університеті започаткувала та продовжує підготовку фахівців за <strong>дуальною освітою</strong>. Щорічно за програмою <strong>Erasmus+</strong> в університеті Гайзенхайма (Німеччина) навчаються 1–2 студенти за професійним спрямуванням «Технологія вина».</p>
+          <p>Кредо кафедри — <em>підготовка фахівців-лідерів</em>. Ми прагнемо розкривати та розвивати потенціал наших вихованців для здобуття компетентностей із вирішення складних задач, досягнення особистого успіху і фінансової незалежності.</p>
+          <p>Підготовку здобувачів здійснює висококваліфікований колектив: <strong>3 професори, доктори технічних наук</strong> та <strong>10 кандидатів технічних наук, доценти</strong>.</p>
+          <p>Кафедра проводить унікальну <strong>сертифікатну програму «Професія сомельє і науково-практичні основи дегустації вин та алкогольних напоїв»</strong>.</p>
+          <p>Професійні навички здобувачі набувають під час практик на підприємствах: ЗАТ «ОБОЛОНЬ», ТОВ «Немирівський ЛГЗ NЕМІRОFF», «САН Ін Бев Україна», «Центр культури вина SHABO», АТ «Коблево», ТОВ «Микулинецький бровар», міні-пивоварня VARVAR та ін.</p>
+        </div>
+        <div class="about__features reveal">
+          <div class="feature-card">
+            <div class="feature-card__icon">🔬</div>
+            <h3 class="feature-card__title">Наукові дослідження</h3>
+            <p class="feature-card__text">Сучасні лабораторії для дослідження мікробного синтезу, ферментації та нанотехнологій у харчовій промисловості.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🏭</div>
+            <h3 class="feature-card__title">Практика на виробництві</h3>
+            <p class="feature-card__text">Партнерство з крафтовими пивоварнями, виноробнями та виробниками ферментованих напоїв по всій Україні.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🌍</div>
+            <h3 class="feature-card__title">Міжнародна діяльність</h3>
+            <p class="feature-card__text">Обмінні програми, міжнародні конференції та співпраця з європейськими університетами і дослідницькими центрами.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🎓</div>
+            <h3 class="feature-card__title">Три рівні освіти</h3>
+            <p class="feature-card__text">Бакалаврат, магістратура та аспірантура — повний цикл підготовки від основ до дисертації.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Пивоваріння</span><span class="marquee__dot">✦</span>
+      <span>Виноробство</span><span class="marquee__dot">✦</span>
+      <span>Біотехнологія</span><span class="marquee__dot">✦</span>
+      <span>Ферментація</span><span class="marquee__dot">✦</span>
+      <span>Комбуча</span><span class="marquee__dot">✦</span>
+      <span>Мікробіологія</span><span class="marquee__dot">✦</span>
+      <span>Крафт</span><span class="marquee__dot">✦</span>
+      <span>Інновації</span><span class="marquee__dot">✦</span>
+      <span>Пивоваріння</span><span class="marquee__dot">✦</span>
+      <span>Виноробство</span><span class="marquee__dot">✦</span>
+      <span>Біотехнологія</span><span class="marquee__dot">✦</span>
+      <span>Ферментація</span><span class="marquee__dot">✦</span>
+      <span>Комбуча</span><span class="marquee__dot">✦</span>
+      <span>Мікробіологія</span><span class="marquee__dot">✦</span>
+      <span>Крафт</span><span class="marquee__dot">✦</span>
+      <span>Інновації</span><span class="marquee__dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ============ HISTORY ============ -->
+  <section class="history section section--dark" id="history">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Історія кафедри</span>
+        <h2 class="section__title">Від витоків до <em>сьогодення</em></h2>
+      </div>
+      <div class="history__timeline">
+        <div class="history__item reveal">
+          <div class="history__year">1884</div>
+          <div class="history__content">
+            <h3>Початок</h3>
+            <p>Підготовка інженерних кадрів для цукрової промисловості пов'язана зі створенням у 1884 році Київського політехнічного інституту. Перші лекції з технології бродильних виробництв читав К.Г. Шиндлер.</p>
+          </div>
+        </div>
+        <div class="history__item reveal">
+          <div class="history__year">1930</div>
+          <div class="history__content">
+            <h3>Заснування кафедри</h3>
+            <p>У 1930 році на базі КПІ був створений Київський інститут цукрової промисловості, а у подальшому і Київський технологічний інститут харчової промисловості (КТІХП). Кафедру очолював Олександр Лазаревич Маліков — один із засновників наукових основ бродильних виробництв в Україні.</p>
+          </div>
+        </div>
+        <div class="history__item reveal">
+          <div class="history__year">1934</div>
+          <div class="history__content">
+            <h3>Розвиток науки</h3>
+            <p>Кафедру технології бродильних виробництв і виноробства очолив професор А.А. Фердман. У 1940 р. він захистив дисертацію і опублікував фундаментальну монографію «Хімія та технологія горілки».</p>
+          </div>
+        </div>
+        <div class="history__item reveal">
+          <div class="history__year">1968</div>
+          <div class="history__content">
+            <h3>Нова ера</h3>
+            <p>З 1968 по 1991 рік кафедру очолював видатний вчений — проф. П.С. Циганков. Під його керівництвом кафедра отримала потужний розвиток наукового та кадрового потенціалу.</p>
+          </div>
+        </div>
+        <div class="history__item reveal">
+          <div class="history__year">1991</div>
+          <div class="history__content">
+            <h3>Професор В.А. Домарецький</h3>
+            <p>З 1991 по 2016 рік кафедру очолював заслужений діяч науки і техніки України проф. В.А. Домарецький. Під його керівництвом кафедра розробила інноваційні технології, захищено понад 30 дисертацій.</p>
+          </div>
+        </div>
+        <div class="history__item reveal">
+          <div class="history__year">2016</div>
+          <div class="history__content">
+            <h3>Сучасність</h3>
+            <p>З 2016 року кафедру очолює доц. А.М. Куц. Кафедра динамічно розвивається, впроваджує дуальну освіту, міжнародні обмінні програми та інноваційні технології в навчальний процес. Щорічно публікується понад 20 статей у виданнях Scopus і Web of Science.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="programs section section--light" id="programs">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Освітні програми</span>
+        <h2 class="section__title">Ваш шлях у світі <em>ферментації</em></h2>
+        <p class="section__desc">Ми пропонуємо три рівні вищої освіти за спеціальністю «Харчові технології» — освітня програма «Технології продуктів бродіння і виноробства».</p>
+      </div>
+      <div class="programs__grid">
+        <!-- Bachelor -->
+        <div class="program-card reveal">
+          <div class="program-card__hero">
+            <img src="images/programs/bachelor.png" alt="Бакалавр" loading="lazy" />
+          </div>
+          <div class="program-card__level">01</div>
+          <div class="program-card__badge">Бакалавр</div>
+          <h3 class="program-card__title">Технології продуктів бродіння і виноробства</h3>
+          <p class="program-card__desc">Фундаментальні знання з біохімії, мікробіології, технології пива, вина та спиртних напоїв. Практика на реальних підприємствах з першого курсу.</p>
+          <ul class="program-card__list">
+            <li>Мікробіологія та біохімія бродіння</li>
+            <li>Технологія пива та безалкогольних напоїв</li>
+            <li>Основи виноробства</li>
+            <li>Аналітичний контроль якості</li>
+            <li>Інженерія харчових виробництв</li>
+          </ul>
+          <div class="program-card__footer">
+            <span class="program-card__duration">4 роки</span>
+            <span class="program-card__degree">ОС «Бакалавр»</span>
+          </div>
+        </div>
+        <!-- Master -->
+        <div class="program-card program-card--featured reveal">
+          <div class="program-card__hero">
+            <img src="images/programs/master.png" alt="Магістр" loading="lazy" />
+          </div>
+          <div class="program-card__level">02</div>
+          <div class="program-card__badge">Магістр</div>
+          <h3 class="program-card__title">Інновації в технологіях бродіння і виноробства</h3>
+          <p class="program-card__desc">Поглиблене вивчення інноваційних технологій, управління якістю та інтелектуальної власності. Наукове дослідження під керівництвом провідних фахівців.</p>
+          <ul class="program-card__list">
+            <li>Інновації в технологіях бродіння</li>
+            <li>Інтелектуальна та промислова власність</li>
+            <li>Управління якістю продукції</li>
+            <li>Науково-дослідна робота</li>
+            <li>Сучасні методи аналізу</li>
+          </ul>
+          <div class="program-card__footer">
+            <span class="program-card__duration">1.5 року</span>
+            <span class="program-card__degree">ОС «Магістр»</span>
+          </div>
+        </div>
+        <!-- PhD -->
+        <div class="program-card reveal">
+          <div class="program-card__hero">
+            <img src="images/programs/phd.png" alt="PhD" loading="lazy" />
+          </div>
+          <div class="program-card__level">03</div>
+          <div class="program-card__badge">PhD</div>
+          <h3 class="program-card__title">Наукові дослідження у галузі біотехнологій</h3>
+          <p class="program-card__desc">Докторська програма для тих, хто прагне рухати науку вперед. Дослідження нових штамів, технологій та продуктів під керівництвом досвідчених науковців.</p>
+          <ul class="program-card__list">
+            <li>Наукова робота та публікації</li>
+            <li>Методологія досліджень</li>
+            <li>Міжнародна наукова співпраця</li>
+            <li>Захист дисертації</li>
+            <li>Педагогічна практика</li>
+          </ul>
+          <div class="program-card__footer">
+            <span class="program-card__duration">4 роки</span>
+            <span class="program-card__degree">ОС «Доктор філософії»</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCIENCE ============ -->
+  <section class="science section" id="science">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Наука та дослідження</span>
+        <h2 class="section__title">На передовій <em>харчової науки</em></h2>
+      </div>
+      <div class="science__grid">
+        <div class="science__main reveal">
+          <div class="science-card science-card--large">
+            <div class="science-card__number">01</div>
+            <h3 class="science-card__title">Мікробний синтез та біоінженерія</h3>
+            <p class="science-card__text">Дослідження високоефективних технологій мікробного синтезу для створення нових ферментованих продуктів. Розробка інноваційних штамів мікроорганізмів для харчової промисловості.</p>
+          </div>
+        </div>
+        <div class="science__side reveal">
+          <div class="science-card">
+            <div class="science-card__number">02</div>
+            <h3 class="science-card__title">Нанотехнології безпеки харчування</h3>
+            <p class="science-card__text">Застосування нанотехнологій для забезпечення безпеки та якості продуктів бродіння і виноробства.</p>
+          </div>
+          <div class="science-card">
+            <div class="science-card__number">03</div>
+            <h3 class="science-card__title">Енергозберігаючі технології</h3>
+            <p class="science-card__text">Розробка ресурсо- та енергозберігаючих технологій виробництва для екологізації виробничих процесів.</p>
+          </div>
+          <div class="science-card">
+            <div class="science-card__number">04</div>
+            <h3 class="science-card__title">Функціональні ферментовані продукти</h3>
+            <p class="science-card__text">Створення нових функціональних напоїв на основі ферментації — комбуча, пробіотичні напої, безалкогольне пиво.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="science__publications reveal">
+        <div class="pub-stats">
+          <div class="pub-stat">
+            <span class="pub-stat__number" data-count="200">0</span><span class="pub-stat__plus">+</span>
+            <span class="pub-stat__label">Наукових публікацій</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat__number" data-count="15">0</span><span class="pub-stat__plus">+</span>
+            <span class="pub-stat__label">Патентів</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat__number" data-count="50">0</span><span class="pub-stat__plus">+</span>
+            <span class="pub-stat__label">Наукових конференцій</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat__number" data-count="10">0</span><span class="pub-stat__plus">+</span>
+            <span class="pub-stat__label">Міжнародних проектів</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FACULTY ============ -->
+  <section class="faculty section section--dark" id="faculty">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Викладацький склад</span>
+        <h2 class="section__title">Наставники, які <em>надихають</em></h2>
+        <p class="section__desc">Наші викладачі — це науковці-практики, які поєднують академічний досвід з роботою на реальних виробництвах.</p>
+      </div>
+      <div class="faculty__grid">
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-01.jpg" alt="Куц А.М." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Куц Анатолій Михайлович</h3>
+            <span class="faculty-card__role">Завідувач кафедри</span>
+            <p class="faculty-card__bio">Доктор технічних наук, професор. Завідувач кафедри біотехнології продуктів бродіння і виноробства.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-02.jpg" alt="Мукоїд Р.М." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Мукоїд Роман Миколайович</h3>
+            <span class="faculty-card__role">Заступник завідувача кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент. Куратор студентських груп, організатор майстер-класів на виробництвах. Спеціалізація: технологія пива та крафтове пивоваріння.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-03.jpg" alt="Білько М.В." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Білько Марина Володимирівна</h3>
+            <span class="faculty-card__role">Професор, д.т.н.</span>
+            <p class="faculty-card__bio">Доктор технічних наук, професор. Науковий керівник енологічного гуртка. Провідний фахівець з технології виноробства.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-04.jpg" alt="Прибильський В.Л." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Прибильський Віталій Леонідович</h3>
+            <span class="faculty-card__role">Професор, д.т.н., гарант ОП</span>
+            <p class="faculty-card__bio">Доктор технічних наук, професор. Гарант освітньої програми «Технології продуктів бродіння і виноробства». Спеціаліст у галузі інноваційних технологій ферментації.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-05.jpg" alt="Бабич І.М." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Бабич Ірина Михайлівна</h3>
+            <span class="faculty-card__role">Доцент кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент кафедри БПБВ.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-06.jpg" alt="Бойко П.М." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Бойко Петро Миколайович</h3>
+            <span class="faculty-card__role">Доцент кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент кафедри БПБВ.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-07.jpg" alt="Бондар М.В." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Бондар Микола Васильович</h3>
+            <span class="faculty-card__role">Доцент кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент. Викладач дисципліни «Інтелектуальна і промислова власність».</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-08.png" alt="Булій Ю.В." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Булій Юрій Володимирович</h3>
+            <span class="faculty-card__role">Доцент кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент. Спеціалізація: інноваційні технології виноробства та спиртового бродіння.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-09.jpg" alt="Кириленко Р.Г." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Кириленко Роман Григорович</h3>
+            <span class="faculty-card__role">Доцент кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент кафедри БПБВ.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-10.jpg" alt="Олійник С.І." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Олійник Світлана Іванівна</h3>
+            <span class="faculty-card__role">Доцент, секретар кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент. Секретар кафедри БПБВ.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-11.jpg" alt="Романова З.М." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Романова Зоряна Миколаївна</h3>
+            <span class="faculty-card__role">Доцент кафедри</span>
+            <p class="faculty-card__bio">Кандидат технічних наук, доцент кафедри БПБВ.</p>
+          </div>
+        </div>
+        <div class="faculty-card reveal">
+          <div class="faculty-card__avatar">
+            <img src="images/faculty/faculty-12.jpg" alt="Бондаренко Л.В." class="faculty-card__photo" loading="lazy" />
+          </div>
+          <div class="faculty-card__info">
+            <h3 class="faculty-card__name">Бондаренко Людмила Володимирівна</h3>
+            <span class="faculty-card__role">Завідувач лабораторією</span>
+            <p class="faculty-card__bio">Завідувач лабораторією кафедри БПБВ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ALUMNI ============ -->
+  <section class="alumni section" id="alumni">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Випускники</span>
+        <h2 class="section__title">Наші <em>випускники</em></h2>
+        <p class="section__desc">Випускники кафедри БПБВ займають керівні посади на підприємствах харчової промисловості України та Європи — від крафтових пивоварень до міжнародних корпорацій.</p>
+      </div>
+      <div class="alumni__grid">
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-01.jpg" alt="Сергій Кірієнко" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Сергій Кірієнко</h3>
+            <p class="alumni-card__desc">Випускник кафедри БПБВ, працює на підприємствах харчової промисловості.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-02.png" alt="Володимир Панчук" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Володимир Панчук</h3>
+            <p class="alumni-card__desc">Працював на ТОВ «ППЕК», ДП «Дублянський спиртовий завод», реконструював спиртові заводи в Азербайджані. Нині навчається на 4-му курсі НУХТ з елементами дуальної освіти.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-03.png" alt="Микола Поліщук" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Микола Поліщук</h3>
+            <p class="alumni-card__desc">У 2024 році розпочав професійний шлях на ТОВ «Броварня Міра» на посаді молодшого технолога. Продовжує навчання на магістратурі з елементами дуальної освіти.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-04.png" alt="Анжеліка Головенько" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Анжеліка Головенько</h3>
+            <p class="alumni-card__desc">Працює на ТОВ «ЛВН ЛІМІТЕД» — виробнику лікеро-горілчаної продукції ТМ Nemiroff. З початку 2025 року обіймає посаду технолога.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-05.png" alt="Борис Роздобудько" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Борис Роздобудько</h3>
+            <p class="alumni-card__desc">Навчався в НУХТ 2007–2012 р. У 2015 році захистив к.т.н. З 2016 — головний технолог броварні Космополіт. У 2022 заснував Liberty Сraft Brewery (Баварія, Німеччина).</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-06.jpg" alt="Назарій Косіковський та Євгеній Хромець" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Назарій Косіковський та Євгеній Хромець</h3>
+            <p class="alumni-card__desc">Випускники БПБВ 2014–2020. Головний технолог та директор з виробництва компанії «Eat Easy». Створили якісний продукт — Комбучу.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-07.png" alt="Оксана Коноваленко та Кирило Джевага" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Оксана Коноваленко та Кирило Джевага</h3>
+            <p class="alumni-card__desc">Коноваленко — продовжує навчання в магістратурі. Джевага — молодший технолог ТОВ «ІТ ІЗІ», навчається на 4-му курсі НУХТ за дуальною формою.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-08.jpg" alt="Віктор Ващук" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Віктор Ващук</h3>
+            <p class="alumni-card__desc">Випускник 1999 р. Співвласник PestBrewery, головний технолог AltBier. Зварив найміцніше пиво в Україні (35% алк.). З 2021 — керівник проектів «Власні броварні Сільпо».</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-09.jpg" alt="Вікторія Колесник" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Вікторія Колесник</h3>
+            <p class="alumni-card__desc">Навчалася в НУХТ 2010–2015. Працювала виноробом у Криму, провела сезони в Новій Зеландії та Бордо. Зараз — винороб Small Vines у Каліфорнії.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-10.jpg" alt="Ярослав Боярчук" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Ярослав Боярчук</h3>
+            <p class="alumni-card__desc">Навчався в НУХТ 2007–2012. Розпочав кар'єру на спиртовому заводі, пройшовши шлях від слюсара до змінного хіміка. Успішно працює в галузі біотехнологій.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-11.jpg" alt="Любов Онищук" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Любов Онищук</h3>
+            <p class="alumni-card__desc">Закінчила КТІХП (НУХТ) у 1986 р. Директор ТОВ «Пивоварня Зіберта» понад 35 років. Під її керівництвом завод перебудовано в сучасне підприємство європейського зразку.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-12.jpg" alt="Ігор Ольшаковський" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Ігор Ольшаковський</h3>
+            <p class="alumni-card__desc">Нагороджений Почесними грамотами КМУ, Мінагрополітики, концерну «Укрспирт». Заслужений працівник промисловості України.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-13.jpg" alt="Семчишин-Патіль Ірина" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Семчишин-Патіль Ірина</h3>
+            <p class="alumni-card__desc">Навчалася в НУХТ 2007–2012. Працює начальником з якості та виноробом на виноробні King Valley Wines у Вікторії, Австралія.</p>
+          </div>
+        </div>
+        <div class="alumni-card reveal">
+          <img src="images/alumni/alumni-14.jpg" alt="Зінкевич Тетяна" class="alumni-card__photo" loading="lazy" />
+          <div class="alumni-card__info">
+            <h3 class="alumni-card__name">Зінкевич Тетяна</h3>
+            <p class="alumni-card__desc">Навчалася в НУХТ 2007–2012. Працює виноробом в Marlborough Vintners, Blenheim, Нова Зеландія.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTERNATIONAL ============ -->
+  <section class="international section section--dark" id="international">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Міжнародна діяльність</span>
+        <h2 class="section__title">На міжнародній <em>арені</em></h2>
+        <p class="section__desc">Щорічно за програмою Erasmus+ в університеті Гайзенхайма (Німеччина) навчаються 1–2 студенти за професійним спрямуванням «Виноробство та напої».</p>
+      </div>
+      <div class="international__content reveal">
+        <p class="international__text">У 2024–2025 навчальному році здобувачка третього курсу кафедри БПБВ Елеонора Сланюк навчається в Університеті Гайзенхайм за програмою Erasmus+ KA131. Елеонора вивчає дисципліни з виноробства та пивоваріння, проходить практику на виноградниках та у лабораторіях.</p>
+      </div>
+      <div class="international__gallery reveal">
+        <img src="images/international/intl-01.jpg" alt="Міжнародна діяльність — Erasmus+" loading="lazy" />
+        <img src="images/international/intl-02.jpg" alt="Міжнародна діяльність — Гайзенхайм" loading="lazy" />
+        <img src="images/international/intl-03.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-04.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-05.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-06.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-07.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-08.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-09.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-10.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-11.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-12.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-13.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-14.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-15.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-16.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-17.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-18.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-19.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-20.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-21.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-22.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-23.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-24.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-25.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        <img src="images/international/intl-26.jpg" alt="Міжнародна діяльність" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCIENTIFIC CLUBS ============ -->
+  <section class="clubs section" id="clubs">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Наукові гуртки</span>
+        <h2 class="section__title">Наука починається <em>з цікавості</em></h2>
+        <p class="section__desc">На кафедрі працюють 5 студентських науково-дослідних гуртків. Результатом їх роботи є щорічне публікування 10–15 наукових статей та понад 30 доповідей на міжнародних і всеукраїнських наукових конференціях.</p>
+      </div>
+
+      <!-- Club 1: Юні винороби (Енологічний гурток) -->
+      <div class="club-card reveal">
+        <div class="club-card__header" data-club-toggle>
+          <div class="club-card__icon">🍇</div>
+          <div class="club-card__heading">
+            <h3 class="club-card__title">Юні винороби</h3>
+            <span class="club-card__supervisor">Наукові керівники: професор Білько Марина Володимирівна, доцент Бабич Ірина Михалівна</span>
+          </div>
+          <span class="club-card__toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </div>
+        <div class="club-card__body">
+          <div class="club-card__body-inner">
+            <div class="club-card__hero">
+              <img src="images/clubs/young-winemakers.png" alt="Юні винороби" loading="lazy" />
+            </div>
+            <div class="club-card__text">
+              <p>Початок сезону виноробства відзначився активною роботою й на кафедрі біотехнології продуктів бродіння і виноробства. У межах діяльності наукового гуртка студенти працювали з виноградом різних сортів — як європейської групи, так і української селекції та міжвидових гібридів. Зокрема, у дослідженнях використовували сорти Каберне Совіньйон, Мерло, Одеський чорний, Красень, Юпітер, Рислінг, Сухолиманський, Шардоне.</p>
+              <p>У процесі роботи студенти самостійно здійснювали переробку винограду за різними технологічними схемами, отримували сусло, опановували роботу з дріжджами та поживними середовищами для них, а також одержували виноматеріали. Окрему увагу було приділено роботі з виноградними вичавками як цінною вторинною сировиною для виготовлення екстрактів із високою біологічною цінністю.</p>
+              <p>Отримані виноматеріали стали основою для формування кількох наукових напрямів досліджень, а також будуть використані під час виконання магістерських кваліфікаційних робіт.</p>
+            </div>
+          </div>
+          <div class="club-card__text" style="padding: 0 var(--space-2xl) var(--space-sm);">
+            <p>Робота наукового гуртка також була зосереджена на підборі локальних сортів винограду Закарпатського регіону з метою використання їх у виробництві ігристих вин. Дослідження проводили з виноградом сортів, поширених у Закарпатській області, зокрема Черсегі Фюсереш, Блауфранкіш, Біанка, Олег Діамант.</p>
+            <p>У межах практичної частини студенти самостійно здійснювали переробку винограду з метою отримання виноматеріалів для ігристих вин; проводили стабілізацію тихих вин із використанням сучасних допоміжних матеріалів; підготовлені виноматеріали закладали на вторинне бродіння в пляшках за класичною технологією.</p>
+            <p>Отримані зразки виноматеріалів із локальних сортів винограду та зразки ігристих вин стали основою для поточних наукових досліджень здобувачів ОС «Магістр».</p>
+            <p class="club-card__thanks">Висловлюємо щиру подяку корпорації «Укрвинпром» та особисто генеральному директору Володимиру Кучеренку за надану допомогу з виноградною сировиною та обладнанням.</p>
+            <p class="club-card__thanks">Висловлюємо щиру подяку директору ФГ "Chateau Pauk" Івану Федоровичу Паук за надану сировину, а також директору ТОВ «КОНТ» Кепканову Юрію Анатолійовичу за допомогу в наданні дріжджів та матеріалів для бродіння.</p>
+          </div>
+          <div class="club-card__gallery">
+            <img src="images/wine-club/wine-club-01.png" alt="Юні винороби" loading="lazy" />
+            <img src="images/wine-club/wine-club-02.jpg" alt="Юні винороби" loading="lazy" />
+            <img src="images/wine-club/wine-club-03.jpg" alt="Переробка винограду" loading="lazy" />
+            <img src="images/wine-club/wine-club-04.jpg" alt="Бродіння" loading="lazy" />
+            <img src="images/wine-club/wine-club-05.jpg" alt="Контроль процесу" loading="lazy" />
+            <img src="images/wine-club/wine-club-06.png" alt="Дегустація" loading="lazy" />
+            <img src="images/wine-club/wine-club-07.jpg" alt="Лабораторія" loading="lazy" />
+            <img src="images/wine-club/wine-club-08.jpg" alt="Студенти" loading="lazy" />
+            <img src="images/wine-club/wine-club-09.jpg" alt="Аналіз зразків" loading="lazy" />
+            <img src="images/wine-club/wine-club-10.jpg" alt="Збір винограду" loading="lazy" />
+            <img src="images/wine-club/wine-club-11.png" alt="Сертифікатна програма" loading="lazy" />
+            <img src="images/wine-club/wine-club-12.jpg" alt="Обладнання" loading="lazy" />
+            <img src="images/wine-club/wine-club-13.jpg" alt="Практика" loading="lazy" />
+            <img src="images/wine-club/wine-club-14.jpg" alt="Майстер-клас" loading="lazy" />
+            <img src="images/wine-club/wine-club-15.jpg" alt="Оцінка якості" loading="lazy" />
+            <img src="images/wine-club/wine-club-16.png" alt="Навчання" loading="lazy" />
+            <img src="images/wine-club/wine-club-17.png" alt="Результати досліджень" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Club 2: Юні пивовари -->
+      <div class="club-card reveal">
+        <div class="club-card__header" data-club-toggle>
+          <div class="club-card__icon">🍺</div>
+          <div class="club-card__heading">
+            <h3 class="club-card__title">Юні пивовари</h3>
+            <span class="club-card__supervisor">Науковий керівник: доцент Мукоїд Роман Миколайович</span>
+          </div>
+          <span class="club-card__toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </div>
+        <div class="club-card__body">
+          <div class="club-card__body-inner">
+            <div class="club-card__hero">
+              <img src="images/clubs/young-brewers.png" alt="Юні пивовари" loading="lazy" />
+            </div>
+            <div class="club-card__text">
+              <p>Ви думаєте, що пивоваріння — це просто рецепт? Ми доведемо, що це справжнє мистецтво, поєднане з високою наукою. Наш гурток об'єднує здобувачів, які прагнуть зазирнути «під кришку» технологічних процесів та створити продукт майбутнього.</p>
+              <h4>Чим ми займаємося?</h4>
+              <p>Ми не просто варимо — ми досліджуємо. Наша діяльність охоплює повний цикл створення напою:</p>
+              <ul>
+                <li><strong>Інноваційні рецептури:</strong> Експериментуємо з додаванням незвичних інгредієнтів та вдосконалюємо класику.</li>
+                <li><strong>Хімія компонентів:</strong> Аналізуємо склад води, солоду та хмелю для досягнення ідеального балансу.</li>
+                <li><strong>Мікробіологія та дріжджі:</strong> Вивчаємо життя мікроорганізмів та їхній вплив на аромат і смак.</li>
+                <li><strong>Контроль якості:</strong> Оволодіваємо сучасними аналітичними методами від каламутності до стійкості піни.</li>
+              </ul>
+              <p>Хочеш спробувати себе в ролі пивовара-науковця? Пиши нам у директ або приходь на кафедру!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Club 3: Технології підвищення якості горілок -->
+      <div class="club-card reveal">
+        <div class="club-card__header" data-club-toggle>
+          <div class="club-card__icon">🧪</div>
+          <div class="club-card__heading">
+            <h3 class="club-card__title">Технології підвищення якості і стабільності горілок та алкогольних напоїв</h3>
+            <span class="club-card__supervisor">Науковий керівник: доцент Олійник Світлана Іванівна</span>
+          </div>
+          <span class="club-card__toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </div>
+        <div class="club-card__body">
+          <div class="club-card__body-inner">
+            <div class="club-card__hero">
+              <img src="images/clubs/vodka-quality.png" alt="Технології підвищення якості горілок" loading="lazy" />
+            </div>
+            <div class="club-card__text">
+              <p>Робота наукового гуртка спрямована на підвищенні якості алкогольної продукції та збільшенням строку її придатності. Проводили дослідження застосування сучасних фільтрувальних, сорбційних, комплексних багатокомпонентних завантажень для кондиціювання води та очищення водно-спиртових сумішей у технології горілок, горілок особливих та лікеро-горілчаних напоїв.</p>
+              <p>Здобувачі самостійно аналізували воду та сортівку до та після її очищення, визначали фізико-хімічні показники досліджуваних матеріалів, встановлювали технологічні режими та оцінювали соціально-економічну ефективність зумовлену покращенням якості і безпечності підготовленої води та лікеро-горілчаної продукції.</p>
+              <p>За результатами роботи отримано <strong>патент на корисну модель №158129</strong> "Спосіб очищення водно-спиртової суміші для виробництва горілок і горілок особливих", зареєстровано в Державному реєстрі України корисних моделей 01.01.2025.</p>
+              <p>Важливим напрямом досліджень є вдосконалення технологій алкогольних напоїв із використанням сучасних боніфікуючих інгредієнтів і напівфабрикатів для підвищення стійкості горілок та лікеро-горілчаних виробів.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Club 4: Інновації технологій спирту -->
+      <div class="club-card reveal">
+        <div class="club-card__header" data-club-toggle>
+          <div class="club-card__icon">⚗️</div>
+          <div class="club-card__heading">
+            <h3 class="club-card__title">Інновації технологій спирту</h3>
+            <span class="club-card__supervisor">Науковий керівник: доцент Бондар Микола Васильович</span>
+          </div>
+          <span class="club-card__toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </div>
+        <div class="club-card__body">
+          <div class="club-card__body-inner">
+            <div class="club-card__hero">
+              <img src="images/clubs/spirit-innovation.png" alt="Інновації технологій спирту" loading="lazy" />
+            </div>
+            <div class="club-card__text">
+              <p>Науковий гурток спрямований на дослідження та вдосконалення сучасних технологій виробництва етилового спирту. Здобувачі вивчають інноваційні підходи до переробки сировини, оптимізації процесів бродіння та ректифікації, а також розробляють нові методи підвищення якості кінцевого продукту.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SCIENCE RESEARCH ============ -->
+  <section class="research section section--dark" id="research">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Наукова робота</span>
+        <h2 class="section__title">Наука та <em>дослідження</em></h2>
+        <p class="section__desc">Наукова робота кафедри спрямована на підвищення ефективності технологій напоїв, спирту, дріжджів та інших продуктів бродіння.</p>
+      </div>
+      <div class="research__gallery reveal">
+        <img src="images/science/sci-01.jpg" alt="Наукова робота" loading="lazy" />
+        <img src="images/science/sci-02.jpg" alt="Наукова робота — дослідження" loading="lazy" />
+        <img src="images/science/sci-03.jpg" alt="Наукова робота — лабораторія" loading="lazy" />
+        <img src="images/science/sci-04.jpg" alt="Наукова робота — аналіз" loading="lazy" />
+        <img src="images/science/sci-05.jpg" alt="Наукова робота — експерименти" loading="lazy" />
+        <img src="images/science/sci-06.jpg" alt="Наукова робота — результати" loading="lazy" />
+        <img src="images/science/sci-07.jpg" alt="Наукова робота — публікації" loading="lazy" />
+        <img src="images/science/sci-08.jpg" alt="Наукова робота — конференція" loading="lazy" />
+        <img src="images/science/sci-09.jpg" alt="Наукова робота — презентація" loading="lazy" />
+      </div>
+      <div class="research__phd reveal">
+        <h3 class="research__subtitle">Наші аспіранти</h3>
+        <div class="research__phd-grid">
+          <div class="phd-card">
+            <img src="images/phd/phd-01.jpg" alt="Сидоренко Валентин" class="phd-card__photo" loading="lazy" />
+            <h4>Сидоренко Валентин</h4>
+            <p>«Удосконалення технології білих ігристих вин на основі сортів винограду Закарпатського регіону»</p>
+          </div>
+          <div class="phd-card">
+            <img src="images/phd/phd-02.png" alt="Ляшенко Юлія" class="phd-card__photo" loading="lazy" />
+            <h4>Ляшенко Юлія</h4>
+            <p>«Удосконалення технології медових ферментованих напоїв із застосуванням біотехнологічних способів»</p>
+          </div>
+          <div class="phd-card">
+            <img src="images/phd/phd-03.jpg" alt="Абкадиров Февзі" class="phd-card__photo" loading="lazy" />
+            <h4>Абкадиров Февзі</h4>
+            <p>Аспірант кафедри БПБВ, проводить дослідження у галузі харчових технологій.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STUDENT LIFE ============ -->
+  <section class="life section" id="life">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Студентське життя</span>
+        <h2 class="section__title">Навчання через <em>досвід</em></h2>
+      </div>
+      <div class="life__timeline">
+        <!-- VARVAR -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <span class="timeline-item__date">Листопад 2024</span>
+            <h3 class="timeline-item__title">Майстер-клас на пивоварні VARVAR</h3>
+            <p class="timeline-item__text">Здобувачі бакалаврату та магістратури відвідали пивоварню VARVAR, де головний технолог Олена Дерій провела лекцію та екскурсію. Студенти побачили повний технологічний цикл — від підготовки сировини до готового напою, та взяли участь у навчальній дегустації.</p>
+            <div class="timeline-gallery">
+              <img src="images/student-life/032.jpg" alt="VARVAR — екскурсія 1" loading="lazy" />
+              <img src="images/student-life/033.jpg" alt="VARVAR — екскурсія 2" loading="lazy" />
+              <img src="images/student-life/034.jpg" alt="VARVAR — екскурсія 3" loading="lazy" />
+              <img src="images/student-life/035.jpg" alt="VARVAR — екскурсія 4" loading="lazy" />
+              <img src="images/student-life/036.jpg" alt="VARVAR — екскурсія 5" loading="lazy" />
+              <img src="images/student-life/037.jpg" alt="VARVAR — екскурсія 6" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- Intellectual property lecture -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <span class="timeline-item__date">2024</span>
+            <h3 class="timeline-item__title">Лекція з інтелектуальної власності від УкрНОІВІ</h3>
+            <p class="timeline-item__text">Магістранти долучилися до професійної лекції від Академії інтелектуальної власності на тему «Інтелектуальна власність у сучасному світі» в рамках освітньої компоненти під керівництвом гаранта В. Прибильського.</p>
+            <div class="timeline-gallery">
+              <img src="images/student-life/038.jpg" alt="Лекція УкрНОІВІ 1" loading="lazy" />
+              <img src="images/student-life/039.jpg" alt="Лекція УкрНОІВІ 2" loading="lazy" />
+              <img src="images/student-life/040.jpg" alt="Лекція УкрНОІВІ 3" loading="lazy" />
+              <img src="images/student-life/041.jpg" alt="Лекція УкрНОІВІ 4" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- BEERMASTER -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <span class="timeline-item__date">Жовтень 2023</span>
+            <h3 class="timeline-item__title">Екскурсія на BEERMASTER BREWERY</h3>
+            <p class="timeline-item__text">Студенти третього курсу разом з доц. Романом Мукоїдом відвідали крафтову пивоварню у ТРЦ «Respublica». Головний технолог Олександр Руденко — випускник кафедри БПБВ — провів детальну екскурсію та навчальну дегустацію солоду, хмелю та різних сортів пива.</p>
+            <div class="timeline-gallery">
+              <img src="images/student-life/042.jpg" alt="Beermaster 1" loading="lazy" />
+              <img src="images/student-life/043.jpg" alt="Beermaster 2" loading="lazy" />
+              <img src="images/student-life/044.jpg" alt="Beermaster 3" loading="lazy" />
+              <img src="images/student-life/045.jpg" alt="Beermaster 4" loading="lazy" />
+              <img src="images/student-life/048.jpg" alt="Beermaster 5" loading="lazy" />
+              <img src="images/student-life/049.jpg" alt="Beermaster 6" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- Kombucha / Eat Easy -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <span class="timeline-item__date">Жовтень 2023</span>
+            <h3 class="timeline-item__title">Знайомство з технологією комбучі</h3>
+            <p class="timeline-item__text">Першокурсники відвідали підприємство «Eat Easy», де випускники кафедри Євген Хромець (директор з виробництва) та Назар Косіковський (головний технолог) познайомили з повним виробничим циклом комбучі та роботою лабораторії.</p>
+            <div class="timeline-gallery">
+              <img src="images/student-life/051.jpg" alt="Eat Easy 1" loading="lazy" />
+              <img src="images/student-life/052.jpg" alt="Eat Easy 2" loading="lazy" />
+              <img src="images/student-life/053.jpg" alt="Eat Easy 3" loading="lazy" />
+              <img src="images/student-life/054.jpg" alt="Eat Easy 4" loading="lazy" />
+              <img src="images/student-life/055.jpg" alt="Eat Easy 5" loading="lazy" />
+              <img src="images/student-life/056.jpg" alt="Eat Easy 6" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- Open lecture & more events -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <span class="timeline-item__date">Жовтень 2023</span>
+            <h3 class="timeline-item__title">Відкрита лекція з інтелектуальної власності</h3>
+            <p class="timeline-item__text">Доцент Микола Васильович Бондар провів відкрите заняття з дисципліни «Інтелектуальна і промислова власність» для здобувачів ОС «Магістр» факультету БТЕК на тему: Право інтелектуальної власності в Україні.</p>
+            <div class="timeline-gallery">
+              <img src="images/student-life/057.jpg" alt="Лекція Бондаря 1" loading="lazy" />
+              <img src="images/student-life/058.jpg" alt="Лекція Бондаря 2" loading="lazy" />
+              <img src="images/student-life/059.jpg" alt="Лекція Бондаря 3" loading="lazy" />
+              <img src="images/student-life/060.jpg" alt="Лекція Бондаря 4" loading="lazy" />
+              <img src="images/student-life/061.jpg" alt="Лекція Бондаря 5" loading="lazy" />
+              <img src="images/student-life/062.jpg" alt="Лекція Бондаря 6" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- More events -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <span class="timeline-item__date">2023–2024</span>
+            <h3 class="timeline-item__title">Ще більше подій та екскурсій</h3>
+            <p class="timeline-item__text">Студенти кафедри постійно відвідують виробництва, беруть участь у наукових конференціях, дегустаціях та майстер-класах, набуваючи практичний досвід у реальних умовах.</p>
+            <div class="timeline-gallery">
+              <img src="images/student-life/063.jpg" alt="Подія 1" loading="lazy" />
+              <img src="images/student-life/064.jpg" alt="Подія 2" loading="lazy" />
+              <img src="images/student-life/065.jpg" alt="Подія 3" loading="lazy" />
+              <img src="images/student-life/066.jpg" alt="Подія 4" loading="lazy" />
+              <img src="images/student-life/067.jpg" alt="Подія 5" loading="lazy" />
+              <img src="images/student-life/068.jpg" alt="Подія 6" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partners -->
+      <div class="life__partners reveal">
+        <h3 class="life__partners-title">Наші індустріальні партнери</h3>
+        <div class="partners-grid">
+          <div class="partner-logo">VARVAR</div>
+          <div class="partner-logo">Beermaster Brewery</div>
+          <div class="partner-logo">Eat Easy</div>
+          <div class="partner-logo">УкрНОІВІ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Галерея</span>
+        <h2 class="section__title">Яскраві моменти <em> життя кафедри</em></h2>
+      </div>
+      <div class="gallery__grid reveal">
+        <!-- Home page / general department photos -->
+        <div class="gallery__item gallery__item--wide">
+          <img src="images/home/home-01.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-02.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-03.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-04.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item gallery__item--tall">
+          <img src="images/home/home-09.jpg" alt="Кафедра БПБВ — подія" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-10.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="images/home/home-11.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-12.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-13.png" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-14.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="images/home/home-15.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-16.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/home/home-17.jpg" alt="Кафедра БПБВ" loading="lazy" />
+        </div>
+        <!-- International activities -->
+        <div class="gallery__item gallery__item--wide">
+          <img src="images/international/intl-05.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/international/intl-10.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/international/intl-14.jpg" alt="Міжнародна діяльність" loading="lazy" />
+        </div>
+        <!-- Science & research -->
+        <div class="gallery__item gallery__item--wide">
+          <img src="images/science/sci-02.jpg" alt="Наукова робота" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/science/sci-06.jpg" alt="Наукова робота" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/science/sci-08.jpg" alt="Наукова робота" loading="lazy" />
+        </div>
+        <!-- Wine club / Enological -->
+        <div class="gallery__item gallery__item--tall">
+          <img src="images/wine-club/wine-club-03.jpg" alt="Енологічний гурток" loading="lazy" />
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="images/wine-club/wine-club-07.jpg" alt="Енологічний гурток" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/wine-club/wine-club-12.jpg" alt="Виноробство" loading="lazy" />
+        </div>
+        <div class="gallery__item">
+          <img src="images/wine-club/wine-club-14.jpg" alt="Виноробство" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta__inner reveal">
+        <h2 class="cta__title">Готові розпочати свій шлях у світі бродіння?</h2>
+        <p class="cta__text">Приєднуйтесь до спільноти майбутніх технологів, науковців та інноваторів. Від класичного виноробства до крафтового пивоваріння — ваша кар'єра починається тут.</p>
+        <div class="cta__actions">
+          <a href="https://vstup.nuft.edu.ua" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Приймальна комісія</a>
+          <a href="#contact" class="btn btn--outline btn--lg">Зв'язатися з нами</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section section--dark" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Контакти</span>
+        <h2 class="section__title">Завітайте до <em>нас</em></h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact__item">
+            <div class="contact__icon">📍</div>
+            <div>
+              <h4>Адреса</h4>
+              <p>вул. Володимирська, 68<br/>м. Київ, 01601, Україна<br/>Національний університет харчових технологій</p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__icon">📧</div>
+            <div>
+              <h4>Електронна пошта</h4>
+              <p><a href="mailto:bpbv@nuft.edu.ua">bpbv@nuft.edu.ua</a></p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__icon">📱</div>
+            <div>
+              <h4>Телефон</h4>
+              <p><a href="tel:+380442879427">+38 (044) 287-94-27</a></p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__icon">🌐</div>
+            <div>
+              <h4>Ресурси</h4>
+              <p>
+                <a href="https://nuft.edu.ua" target="_blank" rel="noopener">Сайт НУХТ</a><br/>
+                <a href="https://bpbv.nuft.edu.ua" target="_blank" rel="noopener">Поточний сайт кафедри</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact__links reveal">
+          <h3 class="contact__links-title">Корисні посилання</h3>
+          <div class="contact__links-grid">
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">📅</span>
+              <span>Розклад занять</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">💻</span>
+              <span>Дистанційна платформа</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">🏠</span>
+              <span>Електронний кабінет</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">📚</span>
+              <span>Бібліотека</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">🔬</span>
+              <span>Наукові гуртки</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">📖</span>
+              <span>Репозитарій НУХТ</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">💼</span>
+              <span>Працевлаштування</span>
+            </a>
+            <a href="#" class="contact__link-card">
+              <span class="contact__link-icon">🏢</span>
+              <span>Студентське містечко</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">
+            <img src="images/logo/logo-medium.png" alt="БПБВ НУХТ" class="footer__logo-img" />
+            БПБВ
+          </span>
+          <p class="footer__text">Кафедра біотехнології продуктів бродіння і виноробства<br/>Національний університет харчових технологій</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024–2026 Кафедра БПБВ | НУХТ. Всі права захищені.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
