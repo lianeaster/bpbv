@@ -1,10 +1,118 @@
 /* ============================================
    BPBV — Interactive JavaScript
-   Scroll animations, counters, particles,
+   i18n, scroll animations, counters, particles,
    navigation, and smooth interactions
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ---------- I18N (centralized translations) ----------
+  const SUPPORTED_LANGS = ['uk', 'en', 'de', 'fr'];
+  const LANG_LABELS = { uk: 'UA', en: 'EN', de: 'DE', fr: 'FR' };
+  const LANG_FLAGS = { uk: '🇺🇦', en: '🇬🇧', de: '🇩🇪', fr: '🇫🇷' };
+
+  const params = new URLSearchParams(window.location.search);
+  const paramLang = params.get('lang');
+  let lang = paramLang || 'uk';
+  if (!SUPPORTED_LANGS.includes(lang)) lang = 'uk';
+  localStorage.setItem('bpbv-lang', lang);
+
+  const T = window.BPBV_TRANSLATIONS && window.BPBV_TRANSLATIONS[lang] ? window.BPBV_TRANSLATIONS[lang] : window.BPBV_TRANSLATIONS.uk;
+
+  document.documentElement.lang = lang;
+  if (T['meta.title']) document.title = T['meta.title'];
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && T['meta.description']) metaDesc.setAttribute('content', T['meta.description']);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[key] !== undefined) el.innerHTML = T[key];
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const spec = el.getAttribute('data-i18n-attr');
+    const [key, attr] = spec ? spec.split(':') : [];
+    if (key && attr && T[key] !== undefined) el.setAttribute(attr, T[key]);
+  });
+
+  const navLangWrap = document.getElementById('navLangSwitcher');
+  if (navLangWrap && window.BPBV_TRANSLATIONS) {
+    const basePath = (window.location.pathname || 'index.html').split('?')[0] || 'index.html';
+    navLangWrap.innerHTML = '';
+
+    const currentBtn = document.createElement('button');
+    currentBtn.type = 'button';
+    currentBtn.className = 'nav__lang-current';
+    currentBtn.setAttribute('aria-haspopup', 'listbox');
+    currentBtn.setAttribute('aria-expanded', 'false');
+
+    const currentFlagSpan = document.createElement('span');
+    currentFlagSpan.className = 'nav__lang-flag';
+    currentFlagSpan.textContent = LANG_FLAGS[lang] || LANG_LABELS[lang] || '🌐';
+    currentBtn.appendChild(currentFlagSpan);
+
+    navLangWrap.appendChild(currentBtn);
+
+    const list = document.createElement('ul');
+    list.className = 'nav__lang-dropdown';
+    list.setAttribute('role', 'listbox');
+
+    const LANG_NAMES = {
+      uk: 'Українська',
+      en: 'English',
+      de: 'Deutsch',
+      fr: 'Français'
+    };
+
+    SUPPORTED_LANGS.forEach(l => {
+      const li = document.createElement('li');
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'nav__lang-option';
+      btn.setAttribute('data-lang', l);
+      btn.setAttribute('aria-selected', l === lang ? 'true' : 'false');
+
+      const flagSpan = document.createElement('span');
+      flagSpan.className = 'nav__lang-flag';
+      flagSpan.textContent = LANG_FLAGS[l] || LANG_LABELS[l];
+
+      const textSpan = document.createElement('span');
+      textSpan.className = 'nav__lang-name';
+      textSpan.textContent = LANG_NAMES[l] || l.toUpperCase();
+
+      btn.appendChild(flagSpan);
+      btn.appendChild(textSpan);
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+
+    navLangWrap.appendChild(list);
+
+    const toggleDropdown = () => {
+      const expanded = currentBtn.getAttribute('aria-expanded') === 'true';
+      currentBtn.setAttribute('aria-expanded', String(!expanded));
+      list.classList.toggle('nav__lang-dropdown--open', !expanded);
+    };
+
+    currentBtn.addEventListener('click', toggleDropdown);
+
+    list.addEventListener('click', (e) => {
+      const target = e.target.closest('.nav__lang-option');
+      if (!target) return;
+      const newLang = target.getAttribute('data-lang');
+      if (!newLang || !SUPPORTED_LANGS.includes(newLang)) return;
+      const href = newLang === 'uk'
+        ? basePath
+        : basePath + (basePath.includes('?') ? '&' : '?') + 'lang=' + newLang;
+      window.location.href = href;
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navLangWrap.contains(e.target)) {
+        currentBtn.setAttribute('aria-expanded', 'false');
+        list.classList.remove('nav__lang-dropdown--open');
+      }
+    });
+  }
 
   // ---------- NAVIGATION ----------
   const nav = document.getElementById('nav');
@@ -152,16 +260,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Open lightbox on faculty photo click (circular mode)
+  document.querySelectorAll('.faculty-card__photo').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxImg.classList.add('lightbox__img--circle');
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
   // Close lightbox
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox || e.target === closeBtn) {
       lightbox.style.display = 'none';
+      lightboxImg.classList.remove('lightbox__img--circle');
       document.body.style.overflow = '';
     }
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.style.display === 'flex') {
       lightbox.style.display = 'none';
+      lightboxImg.classList.remove('lightbox__img--circle');
       document.body.style.overflow = '';
     }
   });
@@ -325,6 +447,58 @@ document.addEventListener('DOMContentLoaded', () => {
       glow.style.left = e.clientX - 150 + 'px';
       glow.style.top = e.clientY - 150 + 'px';
     });
+  }
+
+  // ---------- NEWS SECTION (LOCAL JSON FEED) ----------
+  // Frontend читає останні новини з локального файлу news.json.
+  // Формат JSON:
+  // [{ title: string, message: string, date: string, url: string }]
+  const newsList = document.getElementById('newsList');
+  const NEWS_API_URL = 'news.json';
+
+  if (newsList) {
+    fetch(NEWS_API_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error('Network error');
+        return res.json();
+      })
+      .then((items) => {
+        if (!Array.isArray(items) || items.length === 0) return;
+        newsList.innerHTML = '';
+
+        items.slice(0, 2).forEach((item) => {
+          const card = document.createElement('article');
+          card.className = 'news-card';
+
+          const date = document.createElement('div');
+          date.className = 'news-card__date';
+          date.textContent = item.date || '';
+
+          const title = document.createElement('h3');
+          title.className = 'news-card__title';
+          title.textContent = item.title || 'Новина кафедри';
+
+          const excerpt = document.createElement('p');
+          excerpt.className = 'news-card__excerpt';
+          excerpt.textContent = item.message || '';
+
+          const link = document.createElement('a');
+          link.className = 'news-card__link';
+          link.href = item.url || 'https://www.facebook.com/groups/918669628322290/';
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = 'Читати у Facebook';
+
+          card.appendChild(date);
+          card.appendChild(title);
+          card.appendChild(excerpt);
+          card.appendChild(link);
+          newsList.appendChild(card);
+        });
+      })
+      .catch(() => {
+        // Keep placeholder; no crash if backend is not configured yet
+      });
   }
 
   // ---------- SCIENTIFIC CLUBS ACCORDION ----------
