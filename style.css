@@ -1783,8 +1783,9 @@ h1, h2, h3, h4, h5, h6 {
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 240px;
-  gap: var(--space-md);
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  gap: 3px;
 }
 
 .gallery__item {
@@ -2132,8 +2133,32 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--clr-text);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.club-schedule__note {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
   margin-bottom: var(--space-lg);
   text-align: center;
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--dark .club-schedule__note {
+  color: rgba(253, 250, 245, 0.7);
+}
+
+.club-schedule__zoom-link {
+  color: var(--clr-gold);
+  font-weight: 500;
+  text-underline-offset: 0.2em;
+}
+
+.club-schedule__zoom-link:hover {
+  color: var(--clr-gold-light);
 }
 
 .club-schedule__table-wrap {
@@ -2178,11 +2203,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .club-schedule__table td:nth-child(2) {
-  color: var(--clr-text-muted);
+  color: var(--clr-text);
   font-style: italic;
 }
 
-.club-schedule__table td:nth-child(3) {
+.club-schedule__table td:nth-child(3),
+.club-schedule__table td:nth-child(4) {
   color: var(--clr-text);
 }
 
