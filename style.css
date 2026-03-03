@@ -1111,6 +1111,49 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+.science-card--large.science-card--with-image {
+  flex-direction: row;
+  padding: 0;
+  overflow: hidden;
+}
+
+.science-card--with-image .science-card__content {
+  flex: 1;
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.science-card--with-image .science-card__image {
+  width: 42%;
+  min-width: 200px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.science-card--with-image .science-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.science-card__image--illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.science-card__image--illustration .science-glassware {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .science-card--large h3 {
   color: #fff;
 }
@@ -2550,6 +2593,39 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 
+  .science-card--large.science-card--with-image {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .science-card--with-image .science-card__content {
+    padding: var(--space-xl);
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .science-card--with-image .science-card__title {
+    font-size: 1.15rem;
+  }
+
+  .science-card--with-image .science-card__text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .science-card--with-image .science-card__image {
+    width: 100%;
+    min-width: 0;
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .science-card--with-image .science-card__image img {
+    object-fit: cover;
+    object-position: center;
+  }
+
   .pub-stats {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2576,21 +2652,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  /* Мобільне меню: список одразу під шапкою, всі пункти видно без внутрішнього скролу */
   .nav__links {
     display: none;
     margin-left: 0;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(26, 17, 24, 0.97);
-    backdrop-filter: blur(20px);
+    background: #1a1118;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 24px;
-    z-index: 999;
+    gap: 6px;
+    padding: var(--space-md) var(--space-lg) var(--space-xl);
+    z-index: 998;
   }
 
   .nav__links.open {
@@ -2598,13 +2673,54 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav__links a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: var(--ff-heading);
+    color: #fff;
+    padding: 10px 14px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    border-radius: var(--radius-md);
+  }
+
+  .nav__links a:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .nav__links .nav__cta {
+    margin-top: var(--space-md);
+    border: 1px solid rgba(201, 169, 78, 0.4);
   }
 
   .nav__burger {
     display: flex;
     z-index: 1001;
+  }
+
+  /* Коли меню відкрите — шапка суцільного кольору, щоб не просвічував контент */
+  .nav.menu-open {
+    background: #1a1118;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Секція «Мікробний синтез та біоінженерія» — мобільна версія */
+  .science-card--with-image {
+    overflow: hidden;
+  }
+
+  .science-card--with-image .science-card__content {
+    padding: var(--space-lg);
+  }
+
+  .science-card--with-image .science-card__image {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  /* Випадаючий список мов на темному фоні */
+  .nav__lang-dropdown {
+    background: #1a1118;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
   }
 
   .hero__stats {
