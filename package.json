@@ -4,5 +4,8 @@
   "scripts": {
     "start": "npx -y serve -l 3000 -s --listen tcp://0.0.0.0:3000",
     "stop": "echo 'Зупиніть сервер: Ctrl+C у терміналі де він запущений'"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.39.0"
   }
 }

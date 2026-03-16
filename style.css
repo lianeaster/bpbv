@@ -2940,29 +2940,46 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ---------- PARTICLE STYLES ---------- */
+/* ---------- PARTICLE STYLES: товсте кільце + затемнена серединка, без бліків, глибина різкості ---------- */
 .particle {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   animation: particleDrift linear infinite;
+  box-sizing: border-box;
 }
 
+.particle-group {
+  pointer-events: none;
+}
+
+/* У групі бульбашки не анімуються окремо — рухаються разом з групою */
+.particle-group .particle {
+  animation: none;
+}
+
+/* Без згасання; частина бульбашок розмита (задній план), частина чітка (передній план) */
 @keyframes particleDrift {
   0% {
     opacity: 0;
-    transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0.92);
   }
-  10% {
+  4% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
-  90% {
-    opacity: 1;
+  25% {
+    transform: translateY(-25vh) scale(1.02);
+  }
+  50% {
+    transform: translateY(-50vh) scale(0.98);
+  }
+  75% {
+    transform: translateY(-75vh) scale(1.01);
   }
   100% {
-    opacity: 0;
-    transform: translateY(-100vh) scale(0.5);
+    opacity: 1;
+    transform: translateY(-100vh) scale(1);
   }
 }
 

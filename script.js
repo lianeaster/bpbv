@@ -293,42 +293,94 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------- HERO PARTICLES ----------
   const particlesContainer = document.getElementById('particles');
 
-  const createParticle = () => {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-
-    const size = Math.random() * 4 + 2;
-    const x = Math.random() * 100;
-    const duration = Math.random() * 12 + 8;
-    const delay = Math.random() * 5;
-    const opacity = Math.random() * 0.4 + 0.1;
-
-    // Wine/gold color palette for particles
-    const colors = [
-      'rgba(201, 169, 78, VAR)',  // gold
-      'rgba(163, 68, 112, VAR)',  // wine-light
-      'rgba(229, 202, 110, VAR)', // gold-light
-      'rgba(91, 26, 58, VAR)',    // burgundy
-    ];
-    const color = colors[Math.floor(Math.random() * colors.length)].replace('VAR', opacity.toString());
-
-    particle.style.cssText = `
+  const createBubbleEl = (size, borderColor, bgGradient, blurAmount) => {
+    const el = document.createElement('div');
+    el.classList.add('particle');
+    const bw = size < 5 ? 1 : Math.min(2, Math.max(1, Math.round(size / 10)));
+    el.style.cssText = `
       width: ${size}px;
       height: ${size}px;
-      left: ${x}%;
-      bottom: -10px;
-      background: ${color};
-      animation-duration: ${duration}s;
-      animation-delay: ${delay}s;
-      box-shadow: 0 0 ${size * 2}px ${color};
+      background: ${bgGradient};
+      border: ${bw}px solid ${borderColor};
+      filter: blur(${blurAmount}px);
+      box-shadow: 0 0 ${size * 0.8}px ${borderColor};
     `;
+    return el;
+  };
 
-    particlesContainer.appendChild(particle);
+  const createParticle = () => {
+    const size = Math.random() * 12 + 3;
+    const x = Math.random() * 100;
+    const duration = Math.random() * 10 + 10;
+    const delay = Math.random() * 5;
+    const opacity = Math.random() * 0.25 + 0.6;
 
-    // Remove after animation
-    setTimeout(() => {
-      particle.remove();
-    }, (duration + delay) * 1000);
+    const colors = [
+      'rgba(247, 241, 212, VAR)',
+      'rgba(243, 230, 179, VAR)',
+      'rgba(234, 214, 150, VAR)',
+      'rgba(255, 248, 225, VAR)',
+    ];
+    const borderColor = colors[Math.floor(Math.random() * colors.length)].replace('VAR', opacity.toString());
+    const innerChampagne = `rgba(243, 230, 179, ${0.12 + Math.random() * 0.1})`;
+    const bgGradient = `radial-gradient(circle at 50% 50%, ${innerChampagne}, transparent 85%)`;
+    const blurAmount = Math.random() < 0.45 ? 0 : (Math.random() * 2.5 + 1.5);
+
+    // Велика бульбашка (≥ 8px) — у ~60% під нею пливе 5–10 маленьких у одній черзі
+    const isLarge = size >= 8;
+    const hasTrail = isLarge && Math.random() < 0.6;
+    if (hasTrail) {
+      const group = document.createElement('div');
+      group.className = 'particle-group';
+      group.style.cssText = `
+        position: absolute;
+        left: ${x}%;
+        bottom: -10px;
+        animation: particleDrift linear infinite;
+        animation-duration: ${duration}s;
+        animation-delay: ${delay}s;
+      `;
+
+      const main = createBubbleEl(size, borderColor, bgGradient, blurAmount);
+      main.style.bottom = '0';
+      main.style.left = '50%';
+      main.style.transform = 'translateX(-50%)';
+      group.appendChild(main);
+
+      const trailCount = Math.floor(Math.random() * 6) + 5; // 5–10
+      const minSize = 2;
+      const maxTrailSize = Math.max(minSize, size / 3);
+      // Відстань від основної до першої — щоб не впиралась; далі більші проміжки між бульбашками
+      let bottomOffset = Math.random() * 12 + 14; // 14–26 px від основни до першої
+
+      for (let i = 0; i < trailCount; i++) {
+        const t = i / (trailCount - 1 || 1);
+        const trailSize = maxTrailSize - (maxTrailSize - minSize) * t;
+        bottomOffset += (Math.random() * 14 + 12); // 12–26 px між бульбашками
+
+        const trail = createBubbleEl(trailSize, borderColor, bgGradient, blurAmount);
+        trail.style.bottom = `-${bottomOffset}px`;
+        trail.style.left = '50%';
+        trail.style.transform = 'translateX(-50%)';
+        trail.style.position = 'absolute';
+        group.appendChild(trail);
+      }
+
+      particlesContainer.appendChild(group);
+      setTimeout(() => group.remove(), (duration + delay) * 1000);
+    } else {
+      const particle = createBubbleEl(size, borderColor, bgGradient, blurAmount);
+      particle.style.cssText += `
+        position: absolute;
+        left: ${x}%;
+        bottom: -10px;
+        animation: particleDrift linear infinite;
+        animation-duration: ${duration}s;
+        animation-delay: ${delay}s;
+      `;
+      particlesContainer.appendChild(particle);
+      setTimeout(() => particle.remove(), (duration + delay) * 1000);
+    }
   };
 
   // Create initial batch
