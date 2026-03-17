@@ -589,7 +589,8 @@ h1, h2, h3, h4, h5, h6 {
 :lang(en) .hero__title,
 :lang(de) .hero__title,
 :lang(fr) .hero__title {
-  font-family: var(--ff-heading-alt);
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
 }
 
 .hero__title-accent {
