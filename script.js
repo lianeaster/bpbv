@@ -590,4 +590,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const firstClub = document.querySelector('.club-card');
   if (firstClub) firstClub.classList.add('active');
 
+  // ---------- HISTORY TIMELINE ACCORDION ----------
+  document.querySelectorAll('[data-history-toggle]').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.history__item');
+      const wasActive = item.classList.contains('active');
+
+      document.querySelectorAll('.history__item.active').forEach(i => {
+        if (i !== item) i.classList.remove('active');
+      });
+
+      item.classList.toggle('active', !wasActive);
+    });
+  });
+
 });

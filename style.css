@@ -1406,18 +1406,69 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.history__content h3 {
+.history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  cursor: pointer;
+}
+
+.history__header h3 {
   font-family: var(--ff-heading);
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: var(--space-sm);
+  margin: 0;
   color: var(--clr-bg);
 }
 
-.history__content p {
+.history__toggle {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--clr-gold);
+  transition: all var(--transition);
+}
+
+.history__item.active .history__toggle {
+  transform: rotate(180deg);
+  background: rgba(201, 169, 78, 0.15);
+}
+
+.history__header:hover .history__toggle {
+  border-color: var(--clr-gold);
+  background: rgba(201, 169, 78, 0.1);
+}
+
+.history__content > p {
   font-size: 0.95rem;
   color: rgba(253, 250, 245, 0.65);
   line-height: 1.7;
+  margin-top: var(--space-sm);
+}
+
+.history__details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.history__item.active .history__details {
+  max-height: 1200px;
+}
+
+.history__details p {
+  font-size: 0.9rem;
+  color: rgba(253, 250, 245, 0.55);
+  line-height: 1.8;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ---------- STUDENT LIFE ---------- */
