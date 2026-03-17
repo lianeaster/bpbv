@@ -586,6 +586,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+:lang(en) .hero__title,
+:lang(de) .hero__title,
+:lang(fr) .hero__title {
+  font-family: var(--ff-heading-alt);
+}
+
 .hero__title-accent {
   background: linear-gradient(135deg, var(--clr-gold), var(--clr-gold-light));
   -webkit-background-clip: text;
