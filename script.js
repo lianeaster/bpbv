@@ -590,6 +590,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const firstClub = document.querySelector('.club-card');
   if (firstClub) firstClub.classList.add('active');
 
+  // ---------- PROGRAM CARDS ACCORDION ----------
+  document.querySelectorAll('[data-program-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.program-card');
+      card.classList.toggle('active');
+    });
+  });
+
   // ---------- HISTORY TIMELINE ACCORDION ----------
   document.querySelectorAll('[data-history-toggle]').forEach(header => {
     header.addEventListener('click', () => {
