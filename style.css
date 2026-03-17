@@ -863,6 +863,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
+  align-items: start;
 }
 
 .program-card {
