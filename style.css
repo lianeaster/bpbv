@@ -282,17 +282,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__inner {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-xl);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .nav__logo {
-  position: absolute;
-  left: var(--space-xl);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -347,6 +344,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 24px;
   list-style: none;
   flex-wrap: nowrap;
+  margin-left: auto;
 }
 
 .nav__links a {
@@ -479,8 +477,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__burger {
   display: none;
-  position: absolute;
-  right: var(--space-xl);
   flex-direction: column;
   gap: 5px;
   background: none;
