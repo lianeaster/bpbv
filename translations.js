@@ -7,6 +7,10 @@ window.BPBV_TRANSLATIONS = {
     // Meta
     'meta.title': 'Кафедра БПБВ — Біотехнологія продуктів бродіння і виноробства | НУХТ',
     'meta.description': 'Кафедра біотехнології продуктів бродіння і виноробства Національного університету харчових технологій. Освітні програми, наукова діяльність, виноробство та пивоваріння.',
+    // Logo
+    'logo.main': 'БПБВ',
+    'logo.sub': 'НУХТ',
+    'logo.alt': 'БПБВ НУХТ',
     // Nav
     'nav.about': 'Про кафедру',
     'nav.history': 'Історія',
@@ -405,6 +409,9 @@ window.BPBV_TRANSLATIONS = {
   en: {
     'meta.title': 'Department BPBV — Biotechnology of Fermentation and Winemaking | NUFT',
     'meta.description': 'Department of Biotechnology of Fermentation and Winemaking at the National University of Food Technologies. Educational programmes, research, winemaking and brewing.',
+    'logo.main': 'BPBV',
+    'logo.sub': 'NUFT',
+    'logo.alt': 'BPBV NUFT',
     'nav.about': 'About',
     'nav.history': 'History',
     'nav.programs': 'Programmes',
@@ -744,6 +751,9 @@ window.BPBV_TRANSLATIONS = {
   de: {
     'meta.title': 'Lehrstuhl BPBV — Biotechnologie der Gärung und des Weinbaus | NUFT',
     'meta.description': 'Lehrstuhl für Biotechnologie der Gärungs- und Weinbauprodukte an der Nationalen Universität für Lebensmitteltechnologien. Studiengänge, Forschung, Weinbau und Brauerei.',
+    'logo.main': 'BPBV',
+    'logo.sub': 'NUFT',
+    'logo.alt': 'BPBV NUFT',
     'nav.about': 'Über uns',
     'nav.history': 'Geschichte',
     'nav.programs': 'Studiengänge',
@@ -1083,6 +1093,9 @@ window.BPBV_TRANSLATIONS = {
   fr: {
     'meta.title': 'Département BPBV — Biotechnologie de la fermentation et de la viticulture | NUFT',
     'meta.description': 'Département de biotechnologie des produits de fermentation et de viticulture de l\'Université nationale des technologies alimentaires. Formations, recherche, viticulture et brasserie.',
+    'logo.main': 'BPBV',
+    'logo.sub': 'NUFT',
+    'logo.alt': 'BPBV NUFT',
     'nav.about': 'Le département',
     'nav.history': 'Histoire',
     'nav.programs': 'Formations',
