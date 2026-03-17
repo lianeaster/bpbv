@@ -293,6 +293,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------- HERO PARTICLES ----------
   const particlesContainer = document.getElementById('particles');
 
+  const syncParticleDrift = () => {
+    if (!particlesContainer) return;
+    const h = particlesContainer.offsetHeight;
+    if (!h) return;
+    let tag = document.getElementById('particle-drift-dyn');
+    if (!tag) {
+      tag = document.createElement('style');
+      tag.id = 'particle-drift-dyn';
+      document.head.appendChild(tag);
+    }
+    tag.textContent = `@keyframes particleDrift{0%{opacity:0;transform:translateY(0) scale(.92)}4%{opacity:1;transform:translateY(0) scale(1)}25%{transform:translateY(-${h*.25}px) scale(1.02)}50%{transform:translateY(-${h*.5}px) scale(.98)}75%{transform:translateY(-${h*.75}px) scale(1.01)}100%{opacity:1;transform:translateY(-${h}px) scale(1)}}`;
+  };
+  syncParticleDrift();
+  window.addEventListener('resize', syncParticleDrift);
+
   const createBubbleEl = (size, borderColor, bgGradient, blurAmount) => {
     const el = document.createElement('div');
     el.classList.add('particle');
