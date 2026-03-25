@@ -598,6 +598,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---------- FACULTY CARDS ACCORDION ----------
+  document.querySelectorAll('[data-faculty-toggle]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const card = btn.closest('.faculty-card');
+      card.classList.toggle('active');
+    });
+  });
+
   // ---------- HISTORY TIMELINE ACCORDION ----------
   document.querySelectorAll('[data-history-toggle]').forEach(header => {
     header.addEventListener('click', () => {
