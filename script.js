@@ -598,6 +598,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---------- FACULTY CARDS: equal closed height ----------
+  const facultyCards = document.querySelectorAll('.faculty-card');
+  function equalizeFacultyCards() {
+    facultyCards.forEach(c => c.style.minHeight = '');
+    let maxH = 0;
+    facultyCards.forEach(c => {
+      if (!c.classList.contains('active')) {
+        maxH = Math.max(maxH, c.offsetHeight);
+      }
+    });
+    if (maxH > 0) {
+      facultyCards.forEach(c => c.style.minHeight = maxH + 'px');
+    }
+  }
+  equalizeFacultyCards();
+  window.addEventListener('resize', equalizeFacultyCards);
+
   // ---------- FACULTY CARDS ACCORDION ----------
   document.querySelectorAll('[data-faculty-toggle]').forEach(btn => {
     btn.addEventListener('click', e => {

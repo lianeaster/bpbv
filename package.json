@@ -6,6 +6,6 @@
     "stop": "echo 'Зупиніть сервер: Ctrl+C у терміналі де він запущений'"
   },
   "devDependencies": {
-    "puppeteer": "^24.39.0"
+    "puppeteer": "^24.40.0"
   }
 }
