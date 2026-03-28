@@ -519,11 +519,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------- NEWS SECTION (LOCAL JSON FEED) ----------
-  // Frontend читає останні новини з локального файлу news.json.
-  // Формат JSON:
-  // [{ title: string, message: string, date: string, url: string }]
+  // Frontend reads latest news from news.json (updated by fetch-news.js).
+  // Format: [{ title, message, date, url, image? }]
   const newsList = document.getElementById('newsList');
   const NEWS_API_URL = 'news.json';
+  const FB_GROUP_URL = 'https://www.facebook.com/groups/918669628322290/';
 
   if (newsList) {
     fetch(NEWS_API_URL)
@@ -535,9 +535,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!Array.isArray(items) || items.length === 0) return;
         newsList.innerHTML = '';
 
-        items.slice(0, 2).forEach((item) => {
+        items.slice(0, 4).forEach((item) => {
           const card = document.createElement('article');
-          card.className = 'news-card';
+          card.className = 'news-card' + (item.image ? ' news-card--has-image' : '');
+
+          if (item.image) {
+            const imgWrap = document.createElement('div');
+            imgWrap.className = 'news-card__image';
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.title || '';
+            img.loading = 'lazy';
+            imgWrap.appendChild(img);
+            card.appendChild(imgWrap);
+          }
+
+          const body = document.createElement('div');
+          body.className = 'news-card__body';
 
           const date = document.createElement('div');
           date.className = 'news-card__date';
@@ -553,20 +567,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const link = document.createElement('a');
           link.className = 'news-card__link';
-          link.href = item.url || 'https://www.facebook.com/groups/918669628322290/';
+          link.href = item.url || FB_GROUP_URL;
           link.target = '_blank';
           link.rel = 'noopener';
-          link.textContent = 'Читати у Facebook';
+          link.textContent = 'Читати у Facebook →';
 
-          card.appendChild(date);
-          card.appendChild(title);
-          card.appendChild(excerpt);
-          card.appendChild(link);
+          body.appendChild(date);
+          body.appendChild(title);
+          body.appendChild(excerpt);
+          body.appendChild(link);
+          card.appendChild(body);
           newsList.appendChild(card);
         });
       })
       .catch(() => {
-        // Keep placeholder; no crash if backend is not configured yet
+        // Keep placeholder HTML; no crash if news.json not available
       });
   }
 
