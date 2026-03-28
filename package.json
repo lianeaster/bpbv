@@ -1,5 +1,6 @@
 {
   "name": "bpbv",
+  "version": "1.3.0",
   "private": true,
   "scripts": {
     "start": "npx -y serve -l 3000 -s --listen tcp://0.0.0.0:3000",
